@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>Wednesday Tokyo → Kyoto · May 27</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root {
+    --gold: #B8860B; --red: #B5562F; --blue: #2A5A8C; --green: #5E7F4B;
+    --ink: #1F1D1B; --sans: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; font-family: var(--sans); }
+  body { display: flex; flex-direction: column; }
+  header {
+    background: var(--ink); color: white;
+    padding: 0.7rem 1rem; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 0.4rem;
+  }
+  header h1 { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.3px; }
+  header .sub { font-size: 0.7rem; color: #b0a896; letter-spacing: 0.5px; }
+  .legend {
+    display: flex; gap: 0.7rem; flex-wrap: wrap;
+    padding: 0.5rem 1rem; background: #f4efe5;
+    font-size: 0.72rem; color: #4a4540;
+    border-bottom: 1px solid #e6dfd0;
+  }
+  .legend label { display: flex; align-items: center; gap: 0.3rem; cursor: pointer; user-select: none; }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .legend .swatch.locked { background: var(--gold); border: 2px solid #8a6420; }
+  .legend .swatch.major { background: var(--red); }
+  .legend .swatch.bonus { background: var(--blue); }
+  .legend .swatch.station { background: white; border: 2px solid var(--ink); }
+  .legend input { margin: 0; }
+  .locate-btn {
+    margin-left: auto;
+    background: var(--ink); color: white; border: none;
+    padding: 0.3rem 0.6rem; border-radius: 4px;
+    font-family: var(--sans); font-size: 0.7rem;
+    cursor: pointer; letter-spacing: 0.3px;
+  }
+  .locate-btn:active { background: var(--red); }
+  #map { flex: 1; }
+  .leaflet-popup-content-wrapper { border-radius: 6px; padding: 0; }
+  .leaflet-popup-content { margin: 0; min-width: 260px; max-width: 320px; }
+  .popup { padding: 0.9rem 1rem; font-family: var(--sans); font-size: 0.82rem; line-height: 1.5; }
+  .popup .badge {
+    display: inline-block; font-size: 0.6rem;
+    padding: 0.18rem 0.5rem; border-radius: 2px;
+    text-transform: uppercase; letter-spacing: 1px;
+    font-weight: 700; margin-bottom: 0.5rem;
+  }
+  .popup .badge.locked { background: #FBF1D5; color: #74531a; }
+  .popup .badge.major { background: #F5E0D2; color: #6b3a1c; }
+  .popup .badge.bonus { background: #DBE5F0; color: #1f4570; }
+  .popup .badge.station { background: #E6DFD0; color: #4a4540; }
+  .popup h3 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--ink); }
+  .popup .when { font-size: 0.72rem; color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.5rem; }
+  .popup .booking { font-size: 0.72rem; background: #FBF1D5; padding: 0.4rem 0.5rem; border-radius: 3px; margin-bottom: 0.6rem; color: #5a3e10; }
+  .popup .what, .popup .why, .popup .known { font-size: 0.78rem; color: #4a4540; margin-bottom: 0.5rem; }
+  .popup .section-label { font-weight: 700; color: var(--ink); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.4px; }
+  .popup .walk { font-size: 0.75rem; color: #5E7F4B; font-weight: 600; margin-top: 0.5rem; margin-bottom: 0.3rem; }
+  .popup .address { font-size: 0.72rem; color: #6a6055; margin-bottom: 0.4rem; font-style: italic; }
+  .popup .nav-link { display: inline-block; margin-top: 0.3rem; margin-right: 0.6rem; font-size: 0.72rem; color: var(--red); text-decoration: none; font-weight: 600; letter-spacing: 0.3px; }
+  .popup .book-link { display: inline-block; margin-top: 0.3rem; font-size: 0.72rem; color: var(--blue); text-decoration: none; font-weight: 600; letter-spacing: 0.3px; }
+  .pin {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-family: var(--sans); font-size: 0.7rem; font-weight: 700;
+  }
+  .pin.locked { background: var(--gold); width: 36px; height: 36px; font-size: 0.85rem; }
+  .pin.major { background: var(--red); }
+  .pin.bonus { background: var(--blue); width: 22px; height: 22px; font-size: 0.6rem; }
+  .pin.station { background: white; color: var(--ink); border: 2px solid var(--ink); width: 22px; height: 22px; font-size: 0.6rem; }
+  .pin.you { background: #2A8C4F; width: 18px; height: 18px; border: 3px solid white; box-shadow: 0 0 0 4px rgba(42,140,79,0.3); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Wednesday Tokyo → Kyoto · May 27</h1>
+    <div class="sub">07:00 Shinkansen · Nishiki + Ippodo · Ritz check-in 15:00 · Mizuki/Pontocho dinner</div>
+  </div>
+  <button class="locate-btn" id="locate">📍 Where am I</button>
+</header>
+
+<div class="legend">
+  <label><input type="checkbox" id="show-locked" checked> <span class="swatch locked"></span> Locked (2)</label>
+  <label><input type="checkbox" id="show-major" checked> <span class="swatch major"></span> Planned (6)</label>
+  <label><input type="checkbox" id="show-bonus" checked> <span class="swatch bonus"></span> Discovery (9)</label>
+  <label><input type="checkbox" id="show-station" checked> <span class="swatch station"></span> Stations (2)</label>
+</div>
+
+<div id="map"></div>
+
+<script>
+const PINS = [
+  {
+    "cat": "locked",
+    "label": "1",
+    "name": "Shinkansen Nozomi 117 (Tokyo → Kyoto)",
+    "lat": 35.6812,
+    "lon": 139.7671,
+    "when": "BOARD 06:50 · DEPART 07:00 · ARRIVE Kyoto 09:12",
+    "booking": "✅ CONFIRMED · Reservation 2005 · Green Car · Car 10, Seats 12-C (aisle) + 12-D (window) · D side is Fuji side for Tokyo→Kyoto · Fuji window ~07:35-08:00",
+    "what": "Nozomi 117 N700 16-car set, Tokyo Station → Kyoto direct (~2 hr 12 min). Green Car has 2+2 seating with attendant service, hot oshibori, power outlets, in-car Wi-Fi (login: shinkansen-free-wifi).",
+    "why": "12-D is the window seat on the Mt. Fuji side. ~07:35-08:00 between Shin-Yokohama and Shizuoka is the visibility window — weather-pending, 70-80% Fuji visibility this time of year on clear mornings.",
+    "known": "Premier Tokaido Shinkansen service; 'Nozomi' = fastest stopping pattern, 'N700' is the current rolling stock with Green Car amenities and seat-rotation at terminals so you always face forward.",
+    "address": "Tokyo Station Tokaido Shinkansen platforms (south end of station)",
+    "walk": "From hotel: leave 06:00 sharp · Yurikamome to Shimbashi 1 stop OR walk to Hamamatsuchō 8 min then Yamanote to Tokyo 5 min · arrive Tokyo Station no later than 06:40"
+  },
+  {
+    "cat": "locked",
+    "label": "2",
+    "name": "Ritz-Carlton Kyoto (HOTEL)",
+    "lat": 35.0163,
+    "lon": 135.7707,
+    "when": "Check-in 15:00 nominal · Your24™ flex via Ambassador",
+    "booking": "✅ CONFIRMED · Confirmation 90261043 · Corner Suite MINAMI · King · River view · 142,000 JPY total (152k points + cash upgrade) · cancel deadline passed (May 24 23:59) · Ambassador Elite",
+    "what": "Ritz-Carlton Kyoto on the Kamogawa river at Nijo-Ohashi bridge. Kerry Hill Architects building, low-rise, river-facing rooms. Address Kamogawa Nijo-Ohashi Hotori, Nakagyo-ku.",
+    "why": "Walking distance to Pontocho (5 min), Nishiki Market (10 min), Gion (15 min), Ippodo Tea (10 min). Mizuki (Michelin 1-star sushi) is in the hotel. Ambassador Elite Your24 means you can request 12-13:00 early check-in by messaging your Ambassador 48 hrs ahead.",
+    "known": "Mizuki Sushi (11m Wajima-lacquer 10-seat counter, Michelin 1-star 6 years running) is in the hotel; Spa Karya is the in-house spa; the Pierre Hermé pâtisserie is here.",
+    "address": "Kamogawa Nijo-Ohashi Hotori, Nakagyo-ku, Kyoto 604-0902 · +81-75-7465555",
+    "walk": "From Kyoto Station: taxi 15 min, ¥1,800-2,400 (beats subway with bags)"
+  },
+  {
+    "cat": "major",
+    "label": "A",
+    "name": "Kyoto Station arrival → Ritz bag drop",
+    "lat": 34.9858,
+    "lon": 135.7588,
+    "when": "09:12 arrive · 09:30 taxi · 09:50 bags dropped",
+    "what": "Kyoto Station Hachijo exit south side for taxi rank. Skip the subway (Karasuma → Tozai transfer + 15 min walk with bags).",
+    "why": "15-min taxi ride to Ritz, ¥1,800-2,400. Drop bags with bellhop, message Ambassador about Your24 early-check, head out for Nishiki.",
+    "known": "Kyoto Station Hachijo (south) entrance has the bigger taxi rank; Karasuma (north) entrance is busier but has the subway lines.",
+    "walk": "Off Shinkansen, follow signs to Hachijo exit, taxi rank is at street level"
+  },
+  {
+    "cat": "major",
+    "label": "B",
+    "name": "Nishiki Market (Karolina pick)",
+    "lat": 35.005,
+    "lon": 135.7647,
+    "when": "10:00-11:30 · ~90 min · mid-morning beats the crush",
+    "what": "400-year-old covered market, 5 blocks long, ~100 vendors selling Kyoto specialty foods: yuba (soy-milk skim), tsukemono pickles, fresh tofu, dashi, octopus skewers, wagashi, knives, tea. Western end is the calm end.",
+    "why": "The Karolina-shaped Kyoto morning. Slow browse, sample as you walk, buy pickles to carry home. Quintessential Kyoto food culture.",
+    "known": "Tanaka Keiran for dashimaki tamago (90-year recipe), Sawawa for Uji matcha sweets, Konnamonja for hot soy-milk doughnuts, Nishiki Soya at western end for fresh yuba, Aritsugu for knives (already covered by Kappabashi — skip).",
+    "address": "Nishiki Koji St, Nakagyo Ward · runs east-west between Teramachi and Takakura streets",
+    "walk": "From Ritz: 10 min walk south along Teramachi"
+  },
+  {
+    "cat": "major",
+    "label": "C",
+    "name": "Weekenders Coffee Tominokoji",
+    "lat": 35.0058,
+    "lon": 135.7651,
+    "when": "11:45-12:15 · daily 7:30-18 · stand + outdoor seats",
+    "what": "Kyoto specialty coffee tucked behind a parking lot in a converted machiya — lighter Scandinavian-style roast, single-origin focus. Founded by Kyoto's most respected coffee roaster.",
+    "why": "The local-craft coffee pick. Closer + better than the % Arabica line at Higashiyama. The machiya setting and the 'hidden behind a parking lot' approach is the Kyoto-coffee aesthetic.",
+    "known": "Kyoto's most-respected indie roaster; the parking-lot-hidden machiya setting; lighter roast preference distinguishes from Tokyo's deeper-roast scene.",
+    "walk": "5 min from Nishiki Market"
+  },
+  {
+    "cat": "major",
+    "label": "D",
+    "name": "Ippodo Tea Kaboku Tearoom",
+    "lat": 35.0153,
+    "lon": 135.7677,
+    "when": "12:30-13:30 · daily 10-17 (last call 16:30) · closed 2nd Wed monthly (May 27 = 4th Wed = OPEN)",
+    "what": "Tea house at Ippodo's Kyoto main store on Teramachi Street. Founded 1717. 44-seat tearoom in three areas where you have tea prepared for you OR self-prepare with staff guidance. NOT a performative ceremony — the real Kyoto tea-house experience.",
+    "why": "The authentic Kyoto answer to the Sakurai-Tokyo rejection. No performative ceremony, just craft. Lineage to 1717. Walk-in.",
+    "known": "Founded 1717; 308-year continuous family operation; the canonical Kyoto tea house; the matcha and sencha sold here are the reference standard.",
+    "address": "52 Tokiwagi-cho, Nakagyo-ku",
+    "walk": "10 min walk back toward Ritz on Teramachi Street"
+  },
+  {
+    "cat": "major",
+    "label": "E",
+    "name": "Teramachi-Sanjo arcade (afternoon walk back)",
+    "lat": 35.009,
+    "lon": 135.7674,
+    "when": "13:30-14:30 · covered shopping arcade",
+    "what": "Long covered shopping arcade running north-south through central Kyoto. Mix of old-Kyoto stationery, ceramics galleries, tea shops, antiques, and modern Japanese fashion.",
+    "why": "Covered (good for any weather), full of one-of-a-kind small shops. Natural walking route between Ippodo and Ritz. Browse pace.",
+    "known": "Centuries-old shopping street; the covered arcade format is canonical Kyoto-central; mix of generations of shops.",
+    "walk": "Runs along Teramachi, north toward Ritz"
+  },
+  {
+    "cat": "major",
+    "label": "F",
+    "name": "Mizuki Sushi (Ritz · Michelin 1*)",
+    "lat": 35.0163,
+    "lon": 135.7707,
+    "when": "Wed DINNER candidate · 19:00 or 19:30 · BOOK via Ambassador",
+    "what": "10-seat counter inside the Ritz-Carlton Kyoto. 11m single Wajima-lacquer slab. Edo-style sushi by chef Hiroshi Mizuki. Michelin 1-star six consecutive years.",
+    "why": "Pure Edo-style sushi, counter intimacy, no fusion — exactly the pattern. Plus it's IN your hotel, which means no transit and you can extend your wine/sake intake without worrying about getting home. Ambassador can lift the reservation if not already booked.",
+    "known": "Michelin 1-star sushi inside a Ritz-Carlton (rare combination); the Wajima-lacquer counter as installation art; Edo-style tradition.",
+    "address": "Ritz-Carlton Kyoto, ground floor"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Pontocho Sushi Ishiya (dinner alt)",
+    "lat": 35.0078,
+    "lon": 135.771,
+    "when": "Wed dinner alt · 18:00 or 20:00 · book via Ambassador",
+    "what": "Hidden sushi counter in the Pontocho alley itself. Seasonal courses before sushi. Reasonable pricing for the caliber.",
+    "why": "If Mizuki is booked, Ishiya is the Pontocho-alley pick — the location IS the experience, lantern-lit narrow alley.",
+    "known": "Pontocho-alley setting; seasonal multi-course before sushi; one of Pontocho's hidden serious counters.",
+    "walk": "10 min walk from Ritz along Kamogawa to Pontocho"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Sushi Matsumoto",
+    "lat": 35.0028,
+    "lon": 135.7705,
+    "when": "Wed dinner alt · Michelin 1* · counter omakase",
+    "what": "Offshoot of the Tokyo Akasaka original. Michelin 1-star. Counter omakase, lunch omakase as a value option.",
+    "why": "Tokyo-pedigree sushi in Kyoto. Counter omakase. Michelin caliber without the Mizuki price tag.",
+    "known": "Tokyo Akasaka lineage; Michelin 1-star Kyoto; counter omakase with lunch-tier value option."
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Sumiyaki Sosai Toriya Hitomi (yakitori)",
+    "lat": 35.0142,
+    "lon": 135.7691,
+    "when": "Wed dinner alt · 'hardest yakitori reservation in Kyoto' · 30+ days lead time",
+    "what": "Sumiyaki Sosai Toriya Hitomi on Nijo Street, close to Ritz. Charcoal yakitori focused on heritage chicken.",
+    "why": "If you wanted yakitori in Kyoto, this is THE one — but it books out 30+ days. Try via byFood or AutoReserve as a long-shot.",
+    "known": "Most-difficult yakitori reservation in Kyoto; charcoal-grilled heritage chicken; near Ritz.",
+    "walk": "Walking distance from Ritz on Nijo Street"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Pontocho Alley (post-dinner walk)",
+    "lat": 35.0078,
+    "lon": 135.7715,
+    "when": "Post-dinner · lantern-lit alley · ~20 min stroll",
+    "what": "Narrow lantern-lit pedestrian alley running parallel to the Kamogawa river, lined with traditional restaurants and bars. Iconic Kyoto evening stroll.",
+    "why": "The canonical post-dinner Kyoto walk. Wooden machiya buildings, paper lanterns, glimpses of the river through side openings.",
+    "known": "Kyoto's iconic dining alley; geisha occasionally cross between teahouses; the architecture is preserved Edo-era machiya.",
+    "walk": "5 min walk from Ritz along Kamogawa"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Bee's Knees Kiyamachi (cocktail)",
+    "lat": 35.0068,
+    "lon": 135.7703,
+    "when": "Post-dinner · ~21:00 · Asia's 50 Best Bars 4×",
+    "what": "Hidden cocktail bar behind a yellow door labeled 'Book Store' on Kiyamachi Street. Asia's 50 Best Bars list for four years running.",
+    "why": "Top-tier cocktails in a deliberately hidden setting. The 'find the unmarked door' aesthetic is the Kyoto bar play.",
+    "known": "Asia's 50 Best Bars × 4; the yellow Book Store door; the Kiyamachi location.",
+    "walk": "8 min walk from Ritz"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Bar Rocking Chair",
+    "lat": 35.0058,
+    "lon": 135.7672,
+    "when": "Post-dinner alt · Kenji Tsubokura's bar",
+    "what": "Kenji Tsubokura's cocktail bar, focused on Japanese-ingredient cocktails (Japanese spirits, yuzu, shiso, hojicha, etc.).",
+    "why": "Cocktail thread + Japanese-ingredient focus. Tsubokura is one of Japan's most-cited bartenders for indigenous-ingredient cocktail innovation.",
+    "known": "Japanese-ingredient cocktail focus; Tsubokura's craft reputation; understated Kyoto setting."
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "L'Escamoteur (Pontocho speakeasy)",
+    "lat": 35.0082,
+    "lon": 135.7713,
+    "when": "Post-dinner alt · speakeasy · illusionist-bartender",
+    "what": "Pontocho speakeasy where the lead bartender doubles as a magician/illusionist — drinks come with sleight-of-hand presentations.",
+    "why": "Theatrical end-of-night option. Different register from Bee's Knees craft-purity vibe.",
+    "known": "Magician-bartender presentation; Pontocho hidden setting; theatrical cocktail experience.",
+    "walk": "10 min walk from Ritz to Pontocho"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "Asahido Honten (Kiyomizuyaki ceramics)",
+    "lat": 34.9952,
+    "lon": 135.7841,
+    "when": "Higashiyama detour · daily 9-18",
+    "what": "Canonical Kiyomizuyaki pottery shop at the gate of Kiyomizu-dera temple. Founded 1870. The most authoritative Kiyomizu-ware shop in Kyoto.",
+    "why": "If you want one piece of Kiyomizuyaki to take home, this is the shop. The 1870 lineage matters here.",
+    "known": "1870 founding; gate-of-Kiyomizu-dera location; the reference Kiyomizuyaki shop in Kyoto.",
+    "walk": "Higashiyama detour — only do if Kiyomizu-dera is on the agenda"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "% Arabica Kyoto Higashiyama (skip unless...)",
+    "lat": 34.9966,
+    "lon": 135.7806,
+    "when": "Skip unless Yasaka Pagoda photo matters",
+    "what": "% Arabica's Higashiyama flagship with the Yasaka Pagoda framed in the background — the most-Instagrammed Kyoto coffee shot.",
+    "why": "20-min cross-town hike with a line. Skip unless Karolina specifically wants the pagoda backdrop photo. Weekenders is better as a coffee stop.",
+    "known": "The Yasaka Pagoda backdrop; long queue most days; the flagship of % Arabica's brand."
+  },
+  {
+    "cat": "station",
+    "label": "S",
+    "name": "Tokyo Station (Tokaido Shinkansen)",
+    "lat": 35.6812,
+    "lon": 139.7671,
+    "when": "Depart 07:00 · arrive by 06:40",
+    "what": "Tokaido Shinkansen platforms are at the south end of Tokyo Station. From the JR Yamanote concourse, follow signs to 'Tokaido Shinkansen' / '東海道新幹線'."
+  },
+  {
+    "cat": "station",
+    "label": "S",
+    "name": "Kyoto Station (Hachijo exit south)",
+    "lat": 34.9858,
+    "lon": 135.7588,
+    "when": "Arrive 09:12 · taxi rank south side",
+    "what": "Shinkansen platforms at the Hachijo (south) side. Taxi rank at Hachijo exit. To Ritz: 15 min, ¥1,800-2,400."
+  }
+];
+
+const map = L.map('map').setView([35.07615263157895, 136.1901947368421], 14);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap', maxZoom: 19
+}).addTo(map);
+
+const groups = { locked: L.layerGroup(), major: L.layerGroup(), bonus: L.layerGroup(), station: L.layerGroup() };
+
+function appleMapsLink(lat, lon, name) {
+  return 'https://maps.apple.com/?q=' + encodeURIComponent(name) + '&ll=' + lat + ',' + lon;
+}
+function googleMapsLink(lat, lon, name) {
+  return 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lon + '&query_place_id=' + encodeURIComponent(name);
+}
+
+PINS.forEach(p => {
+  const icon = L.divIcon({
+    className: '',
+    html: '<div class="pin ' + p.cat + '">' + p.label + '</div>',
+    iconSize: p.cat === 'locked' ? [36, 36] : (p.cat === 'major' ? [28, 28] : [22, 22]),
+    iconAnchor: p.cat === 'locked' ? [18, 18] : (p.cat === 'major' ? [14, 14] : [11, 11])
+  });
+  const marker = L.marker([p.lat, p.lon], { icon });
+
+  const sections = [];
+  const badgeLabel = p.cat === 'locked' ? 'LOCKED' : p.cat === 'major' ? 'planned' : p.cat === 'bonus' ? 'discovery' : 'station';
+  sections.push('<span class="badge ' + p.cat + '">' + badgeLabel + '</span>');
+  sections.push('<h3>' + p.name + '</h3>');
+  if (p.when) sections.push('<div class="when">' + p.when + '</div>');
+  if (p.booking) sections.push('<div class="booking">' + p.booking + '</div>');
+  if (p.what) sections.push('<div class="what"><span class="section-label">What it is — </span>' + p.what + '</div>');
+  if (p.why) sections.push('<div class="why"><span class="section-label">Why for you — </span>' + p.why + '</div>');
+  if (p.known) sections.push('<div class="known"><span class="section-label">Known for — </span>' + p.known + '</div>');
+  if (p.address) sections.push('<div class="address">' + p.address + '</div>');
+  if (p.walk) sections.push('<div class="walk">↪ ' + p.walk + '</div>');
+  if (p.cat !== 'station') {
+    sections.push('<a class="nav-link" href="' + appleMapsLink(p.lat, p.lon, p.name) + '" target="_blank">Apple Maps →</a>');
+    sections.push('<a class="nav-link" href="' + googleMapsLink(p.lat, p.lon, p.name) + '" target="_blank">Google Maps →</a>');
+  }
+  if (p.book) sections.push('<br><a class="book-link" href="' + p.book + '" target="_blank">Book / reserve →</a>');
+
+  marker.bindPopup('<div class="popup">' + sections.join('') + '</div>');
+  groups[p.cat].addLayer(marker);
+});
+
+groups.locked.addTo(map);
+groups.major.addTo(map);
+groups.bonus.addTo(map);
+groups.station.addTo(map);
+
+const all = PINS.map(p => [p.lat, p.lon]);
+if (all.length) map.fitBounds(all, { padding: [30, 30] });
+
+['locked', 'major', 'bonus', 'station'].forEach(cat => {
+  document.getElementById('show-' + cat).addEventListener('change', e => {
+    if (e.target.checked) groups[cat].addTo(map);
+    else map.removeLayer(groups[cat]);
+  });
+});
+
+// Live location — first-fix-center-only; tap button to re-center on demand
+let userMarker = null, userCircle = null, watchId = null, firstFix = true;
+const locateBtn = document.getElementById('locate');
+
+function startTracking() {
+  if (!navigator.geolocation) { alert('Geolocation not supported on this device.'); return; }
+  locateBtn.textContent = '📍 Locating…';
+  firstFix = true;
+  watchId = navigator.geolocation.watchPosition(pos => {
+    const { latitude, longitude, accuracy } = pos.coords;
+    if (userMarker) map.removeLayer(userMarker);
+    if (userCircle) map.removeLayer(userCircle);
+    userMarker = L.marker([latitude, longitude], {
+      icon: L.divIcon({ className: '', html: '<div class="pin you"></div>', iconSize: [18,18], iconAnchor: [9,9] })
+    }).addTo(map);
+    userCircle = L.circle([latitude, longitude], {
+      radius: accuracy, color: '#2A8C4F', fillColor: '#2A8C4F', fillOpacity: 0.1, weight: 1
+    }).addTo(map);
+    if (firstFix) {
+      map.setView([latitude, longitude], Math.max(map.getZoom(), 15));
+      firstFix = false;
+    }
+    locateBtn.textContent = '📍 Re-center';
+  }, err => {
+    alert('Location error: ' + err.message);
+    locateBtn.textContent = '📍 Where am I';
+    watchId = null;
+  }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 5000 });
+}
+
+locateBtn.addEventListener('click', () => {
+  if (watchId === null) startTracking();
+  else if (userMarker) map.setView(userMarker.getLatLng(), Math.max(map.getZoom(), 15));
+});
+</script>
+
+</body>
+</html>
