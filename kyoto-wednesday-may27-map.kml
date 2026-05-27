@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
   <name>Wednesday Kyoto · May 27</name>
-  <description><![CDATA[Southern Higashiyama temple walk · chuhai + tofu + yakitori out of hotel · sake at Yoramu (Wed-only)]]></description>
+  <description><![CDATA[Southern Higashiyama walking tour · Gion Tanto okonomiyaki dinner]]></description>
 
   <Style id="locked"><IconStyle><scale>1.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
   <Style id="major"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -13,16 +13,16 @@
     <name>LOCKED — confirmed bookings / hard anchors</name>
     <Placemark>
       <name>Shinkansen Nozomi 117 (Tokyo → Kyoto)</name>
-      <description><![CDATA[<b>BOARD 06:50 · DEPART 07:00 · ARRIVE Kyoto 09:12</b><br><br><b>BOOKING:</b> ✅ CONFIRMED · Reservation 2005 · Green Car · Car 10, Seats 12-C (aisle) + 12-D (window) · D-side = Fuji side · window ~07:35-08:00<br><br><b>WHAT IT IS:</b> Nozomi 117 N700 16-car set, Tokyo → Kyoto direct (~2 hr 12 min). Green Car: 2+2 seating, attendant service, hot oshibori, power outlets, in-car Wi-Fi (login: shinkansen-free-wifi).<br><br><b>WHY FOR YOU:</b> 12-D is the Mt. Fuji window seat. ~07:35-08:00 between Shin-Yokohama and Shizuoka, weather-pending 70-80% visibility this time of year on clear mornings.<br><br><b>KNOWN FOR:</b> Premier Tokaido service; N700 has rotating seats so you always face forward; ekiben can be grabbed at Tokyo Station beforehand.<br><br>Address: Tokyo Station Tokaido Shinkansen platforms (south end)<br><br><b>↪ From hotel: leave 06:00 sharp · Yurikamome to Shimbashi 1 stop OR Yamanote from Hamamatsuchō · arrive Tokyo Station no later than 06:40</b>]]></description>
+      <description><![CDATA[<b>07:00 depart → 09:12 arrive Kyoto</b><br><br><b>BOOKING:</b> ✅ Reservation 2005 · Green Car · Car 10, Seats 12-C + 12-D · D side = Fuji-side · window ~07:35-08:00<br><br><b>WHAT IT IS:</b> Nozomi 117 N700 16-car set, Tokyo → Kyoto direct. Green Car: 2+2 seating, attendant service, hot oshibori, power outlets, in-car Wi-Fi (login: shinkansen-free-wifi).<br><br><b>WHY FOR YOU:</b> 12-D is the Mt. Fuji window seat. ~07:35-08:00 between Shin-Yokohama and Shizuoka, weather-pending Fuji visibility.<br><br><b>KNOWN FOR:</b> Premier Tokaido service; N700 rotating seats so you always face forward.<br><br>Address: Tokyo Station Tokaido Shinkansen platforms (south end)<br><br><b>↪ From hotel: leave 06:00 sharp</b>]]></description>
       <styleUrl>#locked</styleUrl>
       <Point><coordinates>139.7671,35.6812,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Ritz-Carlton Kyoto (HOTEL — bag drop AM, check in PM)</name>
-      <description><![CDATA[<b>Bag drop 09:50 AM · check-in 15:00 (or earlier via Your24)</b><br><br><b>BOOKING:</b> ✅ CONFIRMED · Confirmation 90261043 · Corner Suite MINAMI · King · River view · 142,000 JPY total (152k pts + cash upgrade) · Ambassador Elite<br><br><b>WHAT IT IS:</b> Ritz-Carlton Kyoto on the Kamogawa river at Nijo-Ohashi. Kerry Hill Architects building, low-rise, river-facing rooms. Drop bags AM, do the temple arc, check in PM.<br><br><b>WHY FOR YOU:</b> Geography: walking distance to Pontocho (5 min), Nishiki (10 min), Kiyamachi (immediate), Kennin-ji + Gion (15 min). Cab to Kiyomizu (south Higashiyama) is 12 min. Message your Ambassador first thing AM for Your24 early check-in (often gets you in around 12-13:00).<br><br><b>KNOWN FOR:</b> Pierre Hermé pâtisserie is in the hotel if you want a quick pastry; the Spa is excellent for late-night decompression.<br><br>Address: Kamogawa Nijo-Ohashi Hotori, Nakagyo-ku, Kyoto 604-0902 · +81-75-7465555<br><br><b>↪ From Kyoto Station: taxi 15 min, ¥1,800-2,400 (beats subway with bags)</b>]]></description>
+      <name>Ritz-Carlton Kyoto</name>
+      <description><![CDATA[<b>Bag drop 09:50 AM · check-in 15:00 (or earlier via Your24)</b><br><br><b>BOOKING:</b> ✅ Confirmation 90261043 · Corner Suite MINAMI · King · River view · Ambassador Elite<br><br><b>WHAT IT IS:</b> Hotel on the Kamogawa river at Nijo-Ohashi. Kerry Hill Architects building, low-rise, river-facing rooms. Drop bags AM, do the temple walk, check in PM.<br><br><b>WHY FOR YOU:</b> Walking distance to Gion, Pontocho, Kiyamachi. Taxi to Kiyomizu (south Higashiyama) ~12 min. Message Ambassador first thing AM for Your24 early check-in.<br><br><b>KNOWN FOR:</b> Pierre Hermé pâtisserie in the hotel; the Spa is excellent for late-night decompress.<br><br>Address: Kamogawa Nijo-Ohashi Hotori, Nakagyo-ku, Kyoto 604-0902 · +81-75-7465555<br><br><b>↪ From Kyoto Station: taxi 15 min, ¥1,800-2,400</b>]]></description>
       <styleUrl>#locked</styleUrl>
-      <Point><coordinates>135.7706,35.0143,0</coordinates></Point>
+      <Point><coordinates>135.77078,35.01428,0</coordinates></Point>
     </Placemark>
   </Folder>
 
@@ -30,152 +30,124 @@
     <name>MAJOR — the planned spine</name>
     <Placemark>
       <name>Kyoto Station Hachijo → Ritz taxi (09:30)</name>
-      <description><![CDATA[<b>09:30 taxi from Hachijo exit · arrive Ritz 09:50</b><br><br><b>WHAT IT IS:</b> Off the Shinkansen, head to Hachijo (south) exit for the bigger taxi rank.<br><br><b>WHY FOR YOU:</b> Drop bags at Ritz, then immediately taxi to Kiyomizu to start the temple walk before the crush.<br><br><b>↪ Follow Hachijo exit signs from Shinkansen platform</b>]]></description>
+      <description><![CDATA[<b>09:30 taxi from Hachijo exit</b><br><br><b>WHAT IT IS:</b> Off the Shinkansen, head to Hachijo (south) exit for the bigger taxi rank.<br><br><b>WHY FOR YOU:</b> Drop bags at Ritz, then taxi to Kiyomizu to start the temple walk before the crush.<br><br><b>↪ Follow Hachijo exit signs from Shinkansen platform</b>]]></description>
       <styleUrl>#major</styleUrl>
       <Point><coordinates>135.7588,34.9858,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Kiyomizu-dera (start the southern Higashiyama walk)</name>
-      <description><![CDATA[<b>~10:30 arrive · ¥500 entry · grounds 06:00-18:00 daily · 60-90 min</b><br><br><b>WHAT IT IS:</b> Kiyomizu-dera (清水寺) — 778-founded Buddhist temple on a Higashiyama hillside, perched on the famous wooden stage that juts out over the slope with no nails (entirely wooden joinery, last major rebuild 1633). UNESCO World Heritage.<br><br><b>WHY FOR YOU:</b> THE iconic southern Higashiyama temple, and NOT on Thursday's e-bike route. The wooden-stage view over Kyoto valley is the canonical Kyoto photo. Start here, walk DOWN the hill through the preserved lanes — your day's spine.<br><br><b>KNOWN FOR:</b> The Kiyomizu wooden stage (12m above the ground, no nails); Otowa waterfall at the base (3 streams: longevity, success, love — drink from one only); the spring sakura and autumn momiji are peak but May is leafy-green and uncrowded vs those windows.<br><br>Address: 1-294 Kiyomizu, Higashiyama-ku<br><br><b>↪ Taxi from Ritz ~12 min, ¥1,200-1,500. Don't try public transit — taxi is faster and cheaper for two.</b>]]></description>
+      <name>Kiyomizu-dera (清水寺)</name>
+      <description><![CDATA[<b>~10:30 arrive · ¥500 entry · grounds 06:00-18:00 · 60-90 min</b><br><br><b>WHAT IT IS:</b> 778 CE Buddhist temple perched on a Higashiyama hillside, with the famous wooden stage projecting over the valley. UNESCO World Heritage 1994.<br><br><b>WHY FOR YOU:</b> THE iconic southern Higashiyama temple. The wooden-stage view over Kyoto is the canonical photo. Start of the day's walking spine — gravity assist DOWN from here through the slopes to Gion.<br><br><b>KNOWN FOR:</b> The wooden stage (13m above the slope, 168 zelkova pillars, no nails); Otowa Waterfall three streams; UNESCO World Heritage.<br><br>Address: 1-294 Kiyomizu, Higashiyama-ku<br><br><b>↪ Taxi from Ritz ~12 min, ¥1,200-1,500. Don't try public transit — taxi is faster and cheaper for two.</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.785,34.9948,0</coordinates></Point>
+      <Point><coordinates>135.78489,34.99483,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Sannenzaka / Ninenzaka preserved lanes</name>
-      <description><![CDATA[<b>12:00-12:45 · walk DOWN from Kiyomizu · ~45 min</b><br><br><b>WHAT IT IS:</b> Sannenzaka (三年坂) and Ninenzaka (二寧坂) — the two preserved stone-stepped lanes that descend from Kiyomizu-dera. Lined with wooden machiya housing pottery shops, sweet shops, tea houses, ceramics galleries, and the Hello Kitty boutique (briefly amusing).<br><br><b>WHY FOR YOU:</b> The single most photographed walking sequence in Kyoto. You walk DOWN, no climbing. Browse shops as you go. Karolina's craft thread + Gavin's pre-war architecture thread both fed here.<br><br><b>KNOWN FOR:</b> These slopes are Edo-era preserved; the Yasaka Pagoda (Hokan-ji) is the iconic view at the bottom of Yasaka-no-To slope; the ceramic shops here are legitimate Kiyomizu-ware studios.<br><br><b>↪ Walk down from Kiyomizu — gravity is your friend</b>]]></description>
+      <name>Sannenzaka + Ninenzaka (三年坂・二寧坂)</name>
+      <description><![CDATA[<b>12:00-12:45 · walk DOWN from Kiyomizu · ~45 min browsing pace · free</b><br><br><b>WHAT IT IS:</b> Two preserved stone-stepped slopes descending from Kiyomizu, lined with 200-year-old wooden machiya converted to shops, cafes, and small inns. Designated National Preservation Districts.<br><br><b>WHY FOR YOU:</b> The most-photographed walking sequence in Kyoto, but easy to enjoy because you walk DOWNHILL through it. Browse pace, shop, soak up the Edo machiya architecture. Karolina's craft thread + your pre-war thread both fed.<br><br><b>KNOWN FOR:</b> Preserved Edo wooden machiya; the Yasaka Pagoda framing at the bottom of Yasaka-no-To slope; Edo-period stone steps polished smooth by centuries of foot traffic.<br><br><b>↪ Walk down from Kiyomizu — gravity assist. ~10 min through both slopes if you don't stop.</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7806,34.9988,0</coordinates></Point>
+      <Point><coordinates>135.78061,34.99888,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Yasaka Pagoda (Hokan-ji) + Kodai-ji</name>
-      <description><![CDATA[<b>~13:00 · pagoda from outside · Kodai-ji ¥600 · 30-45 min</b><br><br><b>WHAT IT IS:</b> Yasaka Pagoda (法観寺) — 5-story pagoda from 589 CE (rebuilt 1440), the only structure of the original Hokan-ji temple, frames the iconic Kyoto photo. Kodai-ji (高台寺) — Zen temple founded 1606 by Toyotomi Hideyoshi's widow, famous for bamboo grove, mossy garden, and tea houses.<br><br><b>WHY FOR YOU:</b> Pagoda from outside is the photo; Kodai-ji is the quiet garden moment after the Sannenzaka crowds. Kodai-ji's bamboo grove is small but genuinely contemplative.<br><br><b>KNOWN FOR:</b> Yasaka Pagoda interior is usually closed; the pagoda is best viewed from the slope (Yasaka-no-To). Kodai-ji has rare evening illuminations in spring/autumn (not May) but is calm in daylight.<br><br>Address: Kodai-ji: 526 Shimokawara-cho, Higashiyama-ku<br><br><b>↪ 5 min walk from bottom of Sannenzaka</b>]]></description>
+      <name>Yasaka Pagoda (Hokan-ji 法観寺)</name>
+      <description><![CDATA[<b>~13:00 · pagoda viewable always from outside · interior occasionally open · 15 min</b><br><br><b>WHAT IT IS:</b> 5-story pagoda from 1440, 46m tall — the only structure remaining from the original Hokan-ji temple complex (589 CE). One of the few medieval pagodas you can occasionally go INSIDE.<br><br><b>WHY FOR YOU:</b> The iconic Kyoto frame: pagoda + wooden houses + sloping street. The slope down from Yasaka-no-To is the canonical photo location.<br><br><b>KNOWN FOR:</b> 1440 construction; 46m tall; the iconic Kyoto photo backdrop; rare medieval interior access.<br><br><b>↪ 5 min walk from bottom of Sannenzaka, then continue 3 min to Kodai-ji</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7795,34.9994,0</coordinates></Point>
+      <Point><coordinates>135.77949,34.99935,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Lunch in Gion (~13:45)</name>
-      <description><![CDATA[<b>~13:45 · casual · pick on the spot</b><br><br><b>WHAT IT IS:</b> Gion district has dozens of casual lunch spots along Hanamikoji and the side lanes — soba, donburi, kushiage, oden, casual sushi, ramen. Don't over-plan — pick by what looks alive.<br><br><b>WHY FOR YOU:</b> You're hungry, you've been walking. Casual lunch energy, not a sit-down ceremony. If you want a specific pick: Honke Daiichi-Asahi (Karasuma branch) Kyoto-style shoyu ramen (since 1947), or pop into any Gion soba counter.<br><br><b>KNOWN FOR:</b> Gion lunch is generally cheaper and more interesting than Gion dinner (dinner = high-end kaiseki territory; lunch = local working Kyoto).<br><br><b>↪ Walk into Gion from Yasaka Shrine area, anywhere along Hanamikoji</b>]]></description>
+      <name>Kodai-ji (高台寺) — Hideyoshi's widow's temple</name>
+      <description><![CDATA[<b>~13:30 · ¥600 entry · 09:00-17:30 · 45-60 min</b><br><br><b>WHAT IT IS:</b> Zen temple founded 1606 by Toyotomi Hideyoshi's widow Nene to memorialize her late warlord-husband. Famous for the bamboo grove, mossy garden, Rikyu tea houses, and Edo-era gold-leaf lacquerwork.<br><br><b>WHY FOR YOU:</b> The quiet contemplative one after the Sannenzaka crowds. Garden + tea-house architecture + serious Edo-era lacquer art in one ¥600 ticket. Less crowded than Kiyomizu by this hour.<br><br><b>KNOWN FOR:</b> Kodai-ji maki-e (gold-leaf lacquer); Sen no Rikyu tea houses; the bamboo grove; Hideyoshi's widow's memorial complex.<br><br>Address: 526 Shimokawara-cho, Higashiyama-ku<br><br><b>↪ 5 min walk from Yasaka Pagoda</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7754,35.0035,0</coordinates></Point>
+      <Point><coordinates>135.78062,35.00007,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Maruyama Park + Yasaka Shrine</name>
-      <description><![CDATA[<b>~14:30 · free · ~30 min · post-lunch stroll</b><br><br><b>WHAT IT IS:</b> Yasaka Shrine (八坂神社) — vermilion-red Shinto shrine at the east end of Shijo-dori, gateway to Gion. Maruyama Park immediately behind — central park with weeping cherry trees (May = green canopy).<br><br><b>WHY FOR YOU:</b> Quintessential Gion-side shrine that locals actually use. Maruyama Park is the calm-down after the Sannenzaka crowds. The walk through here continues your Higashiyama spine.<br><br><b>KNOWN FOR:</b> Yasaka Shrine hosts Gion Matsuri in July; in May it's the calm version. The Maruyama weeping cherry is the most-photographed sakura tree in Kyoto.<br><br><b>↪ Walk from Kodai-ji area, 5-8 min</b>]]></description>
+      <name>Maruyama Park + Yasaka Shrine (丸山公園・八坂神社)</name>
+      <description><![CDATA[<b>~15:00 · free · always open · 30-45 min</b><br><br><b>WHAT IT IS:</b> Yasaka Shrine: 656 CE Shinto shrine, the spiritual center of Gion and home base of the Gion Matsuri festival. Maruyama Park behind = Kyoto's first public park (1886), home to the most-photographed weeping cherry tree in Kyoto.<br><br><b>WHY FOR YOU:</b> Quintessential Gion-side shrine that locals actually use. The vermillion red main hall + the calm of Maruyama Park. May is leafy green, near-empty vs sakura season.<br><br><b>KNOWN FOR:</b> Gion Matsuri origin shrine; the weeping cherry tree (Gion no Yozakura); 1886 first-public-park status.<br><br><b>↪ Walk from Kodai-ji, 5-8 min through Maruyama Park</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7785,35.0036,0</coordinates></Point>
+      <Point><coordinates>135.77852,35.00351,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Kennin-ji (Kyoto's oldest Zen temple)</name>
-      <description><![CDATA[<b>~15:30 · ¥600 entry · 10-16:30 · 45 min</b><br><br><b>WHAT IT IS:</b> Kennin-ji (建仁寺) — Kyoto's oldest Zen temple (founded 1202 by Eisai, the monk who brought tea from China). Famous for the Twin Dragons ceiling painting (108 tatami mats wide, completed 2002) and the Wind God / Thunder God screen (a national treasure).<br><br><b>WHY FOR YOU:</b> Zen temple with serious art collection, walking distance from Gion, NOT on Thursday's e-bike route. The Twin Dragons ceiling alone is worth the entry. Quieter than Kiyomizu by mid-afternoon.<br><br><b>KNOWN FOR:</b> Eisai's lineage (the original tea-from-China monk); the Wind/Thunder God screen by Tawaraya Sotatsu; the Twin Dragons ceiling.<br><br>Address: 584 Komatsucho, Higashiyama-ku<br><br><b>↪ 10 min walk from Yasaka Shrine through Gion's southern edge</b>]]></description>
+      <name>Kennin-ji (建仁寺) — Kyoto's oldest Zen temple</name>
+      <description><![CDATA[<b>~16:00 · ¥600 entry · 10:00-16:30 (last entry 16:00) · 45 min</b><br><br><b>WHAT IT IS:</b> Founded 1202 by Eisai, the monk who brought Zen Buddhism AND TEA SEEDS from China to Japan. Kyoto's OLDEST Zen temple; one of the Kyoto Five Mountains.<br><br><b>WHY FOR YOU:</b> Zen temple with serious art collection (Twin Dragons ceiling + Wind/Thunder God National Treasure screens), and the birthplace of Japanese tea culture. Quieter than Kiyomizu by mid-afternoon. The walking-tour finale before dinner.<br><br><b>KNOWN FOR:</b> Eisai's lineage (the monk who brought tea from China in 1191); the Twin Dragons ceiling (2002); Wind God + Thunder God screens (early 17th century, National Treasures).<br><br>Address: 584 Komatsucho, Higashiyama-ku<br><br><b>↪ 10 min walk south from Yasaka Shrine through Gion's southern edge</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7728,35.0006,0</coordinates></Point>
+      <Point><coordinates>135.77277,35.00057,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Walk back via Pontocho + Nishiki (quick browse)</name>
-      <description><![CDATA[<b>~16:30 · 30 min through Nishiki · back to Ritz</b><br><br><b>WHAT IT IS:</b> Walk west from Kennin-ji along the south side of Shijo, up Pontocho alley (or Kiyamachi parallel), then a quick 30-min loop through Nishiki Market on the way back to Ritz. Final 5-min walk along Kamogawa.<br><br><b>WHY FOR YOU:</b> Karolina-shaped quick market browse (Tanaka Keiran for dashimaki tamago, Sawawa for Uji matcha sweets, Nishiki Soya for fresh yuba). NOT a deep dive — you'll be tired and hungry; just walk through.<br><br><b>KNOWN FOR:</b> Nishiki Market closes ~18:00; you'll catch the end-of-day vendors. Tanaka Keiran and Konnamonja are the two cult stalls if you want a quick bite.<br><br><b>↪ Kennin-ji → Pontocho → Sanjo → Nishiki → north to Ritz · ~35 min total walking</b>]]></description>
+      <name>Gion Tanto (祇園たんと) — DINNER okonomiyaki + chuhai</name>
+      <description><![CDATA[<b>Wed DINNER ONLY 16:30-21:30 LO 21:30 · closed Thu · walk-in · cash/cc</b><br><br><b>WHAT IT IS:</b> Kyoto-style okonomiyaki + iron-plate dishes + chuhai. Small neighborhood teppan counter on Shirakawa Canal near Tatsumi Bridge, Gion edge. Locals + repeat visitors, not the tourist-burned-out Hanamikoji crowd.<br><br><b>WHY FOR YOU:</b> Fluffy-yet-substantial Kyoto okonomiyaki, fresh lemon sours, no-frills setup — the right register after a walking day. ✓ Verified open Wed (closed only Thursdays).<br><br><b>KNOWN FOR:</b> Kyoto-style okonomiyaki (fuwafuwa fluffy with dashi notes); fresh lemon sours and chuhai; teppan iron-plate items.<br><br>Address: 京都府京都市東山区清本町372 (Higashiyama-ku, Kiyomotocho 372)<br><br><b>↪ ~12 min walk from Ritz south along Kamogawa then into Gion. Gion-Shijo Station ~3-5 min.</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7647,35.005,0</coordinates></Point>
+      <Point><coordinates>135.7745,35.00455,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Suiba (Shijo-Kawaramachi) — pre-dinner CHUHAI</name>
-      <description><![CDATA[<b>~18:00-19:00 · TACHINOMIYA standing bar · ¥200-500 plates · walk-in always</b><br><br><b>WHAT IT IS:</b> Pure Kyoto tachinomiya (standing bar) — concrete floor, brightly lit, no chairs, ¥200-500 plates, real chuhai program and deep local sake list. Come as you are. No reservation, never.<br><br><b>WHY FOR YOU:</b> THE chuhai pre-dinner stop. Lemon sour is the canonical order. Foil-steamed mushrooms with lemon-butter, smoked stingray fin. ~30-45 min standing, ¥2-3k total. Sets the right energy for the rest of the night.<br><br><b>KNOWN FOR:</b> Real working-Kyoto standing bar, not a tourist tachinomi. Lemon sour (lemon chuhai) is the order to start.<br><br>Address: Shijo-Kawaramachi area, ~15 min walk south along Kiyamachi from Ritz<br><br><b>↪ Walking distance from Ritz · zero booking · come hungry but not starving</b>]]></description>
+      <name>Ritz-Carlton Kyoto (HOME end of night)</name>
+      <description><![CDATA[<b>~22:00+ home</b><br><br><b>WHAT IT IS:</b> Walk back along Kamogawa from Gion ~12 min, or short taxi.<br><br><b>↪ From Gion Tanto: walk Kamogawa promenade north to Nijo-Ohashi ~12 min</b>]]></description>
       <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7686,35.0042,0</coordinates></Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Tousuiro Kiyamachi — DINNER (yuba on the Kamogawa terrace)</name>
-      <description><![CDATA[<b>~19:30-21:30 · daily 17-22 · Kamogawa yuka terrace open in May</b><br><br><b>BOOKING:</b> Email 1-3 days ahead preferred; lunch is more walk-in friendly, but dinner often takes walk-ins especially mid-week.<br><br><b>WHAT IT IS:</b> Tousuiro (豆水楼) — Kyoto tofu and yuba specialist on Kiyamachi street with a wooden terrace extending out over the Kamogawa river (the famous yuka platforms that go up May-September only).<br><br><b>WHY FOR YOU:</b> May is yuka SEASON — the terraces are open over the river, you eat with the river running below. Tofu/yuba is the Kyoto specialty done casually (not formal kaiseki). Pure single-tradition cuisine, your pattern. 5 min walk from Ritz.<br><br><b>KNOWN FOR:</b> Yuka (川床) river-terrace dining is a Kyoto-only May-September tradition; freshly-dipped yuba (soy-milk skin) pulled tableside; seasonal tofu course ~¥4,000-5,500/person.<br><br>Address: 517-3 Kamiosakamachi, Sanjo-agaru Kiyamachi-dori, Nakagyo-ku<br><br><b>↪ 5 min walk south from Ritz along Kiyamachi</b>]]></description>
-      <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7702,35.0093,0</coordinates></Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Sake Bar Yoramu — LATE NIGHT (Wed-only!)</name>
-      <description><![CDATA[<b>~21:30-23:00 · Wed-Sat 18-24 ONLY · call 15 min ahead</b><br><br><b>WHAT IT IS:</b> Sake Bar Yoramu — owner Yoram Ofer is an Israeli-born sake specialist who's been pouring obscure aged sake (koshu) and rare regional bottles for 25+ years in Kyoto. 8-9 seat counter, max group of 3. Tasting-flight guided by Yoram.<br><br><b>WHY FOR YOU:</b> This is the only night you can hit Yoramu — CLOSED Sun/Mon/Tue, you're back in Tokyo Thursday evening. The sake program here is genuinely once-in-a-trip — bottles you cannot find in any other sake bar in Japan.<br><br><b>KNOWN FOR:</b> Owner-curated obscure sake; aged sake (koshu) specialty; English-speaking proprietor; smallest serious sake bar in central Kyoto.<br><br>Address: Matsuyacho 35-1, Nakagyo-ku (Nijo-dori east of Karasuma) · ~10 min walk west from Ritz<br><br><b>↪ Walk west from Ritz via Nijo-dori · CALL FIRST 15 min ahead to hold a seat</b>]]></description>
-      <styleUrl>#major</styleUrl>
-      <Point><coordinates>135.7611,35.0117,0</coordinates></Point>
+      <Point><coordinates>135.77078,35.01428,0</coordinates></Point>
     </Placemark>
   </Folder>
 
   <Folder>
     <name>BONUS — discovery zone</name>
     <Placemark>
-      <name>Kiyokiyo — modern obanzai standing (alt to Suiba)</name>
-      <description><![CDATA[<b>Pre-dinner alt · standing + bar stools · walk-in</b><br><br><b>WHAT IT IS:</b> Contemporary minimalist standing bar just off Pontocho alley. Elevated obanzai (Kyoto small plates) — tempura is the signature, plus rotating seasonal vegetables, local sake.<br><br><b>WHY FOR YOU:</b> Cleaner aesthetic than Suiba if you want a less-gritty pre-dinner spot. Still standing, still chuhai-friendly.<br><br><b>KNOWN FOR:</b> Tempura is the standout; seasonal obanzai program rotates; local Kyoto sake list.<br><br><b>↪ 5 min from Ritz, just off Pontocho</b>]]></description>
+      <name>Okonomiyaki Kiraku 三条本店 (dinner alt — locals-heavy)</name>
+      <description><![CDATA[<b>Wed 11:30-13:40 LO · 17:00-22:00 LO · closed Mondays</b><br><br><b>WHAT IT IS:</b> Long-time local favorite Kyoto okonomiyaki + teppan, casual neighborhood izakaya energy. Regulars, no spectacle. Fresh chuhai/lemon sours. Alt to Gion Tanto if you want the hidden-alley locals-heavy version.<br><br>Address: 京都府京都市東山区三条通白川橋東4丁目中之町208<br><br><b>↪ ~15 min walk east from Ritz · 5 min from Higashiyama subway</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.77,35.009,0</coordinates></Point>
+      <Point><coordinates>135.779,35.00833,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Tachinomi Sharp — chef-driven standing counter</name>
-      <description><![CDATA[<b>Dinner alt · 10-seat standing · concierge call needed</b><br><br><b>WHAT IT IS:</b> 10-seat standing counter doing 'kaiseki precision at standing-bar prices.' Funa-zushi, seasonal seafood, rare local sake. Daily-changing menu, Japanese-language only.<br><br><b>WHY FOR YOU:</b> If you want the chef-driven serious version of chuhai-tier dining. Standing, but the food is omakase-tier. Needs concierge to call.<br><br><b>KNOWN FOR:</b> 1 min from Kawaramachi Station; daily-changing chef menu; rare regional sake; standing-only.<br><br><b>↪ 12 min walk from Ritz · ask concierge to call for the night</b>]]></description>
+      <name>Shokudo Endo (食堂エンドウ) — LUNCH near Kiyomizu</name>
+      <description><![CDATA[<b>Wed 11:30-15:00 lunch only · 10-seat counter · phone before walking up</b><br><br><b>WHAT IT IS:</b> Hidden-gem local cafeteria off Sannenzaka. Excellent maguro (tuna) donburi and seafood bowls, unfussy, generous portions. Cash-friendly. Praised by Japanese visitors for value and quality.<br><br>Address: 京都市東山区清水2-241-4 · Phone 075-525-5752<br><br><b>↪ 10-15 min walk from Kiyomizu through Sannenzaka side paths</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.7682,35.004,0</coordinates></Point>
+      <Point><coordinates>135.782,34.997,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Bajitofu — yakitori counter (walk-in tier)</name>
-      <description><![CDATA[<b>Dinner alt · mid-range yakitori · reservations recommended</b><br><br><b>WHAT IT IS:</b> Mid-range yakitori counter in downtown Kyoto. Not Michelin-impossible — concierge can usually get a same-day or next-day reservation in the afternoon.<br><br><b>WHY FOR YOU:</b> If you decide you want yakitori instead of tofu/yuba. Tsukune (meatball), hatsu (heart), kawa (skin) are the picks for unusual cuts.<br><br><b>KNOWN FOR:</b> Walkable mid-range Kyoto yakitori; reservations recommended not required; English-speaking-ish.<br><br><b>↪ 10 min walk from Ritz</b>]]></description>
+      <name>Gion Tempura Ramen KIRAKU (葵洛)</name>
+      <description><![CDATA[<b>Wed 11:00-15:00 LO + 17:30-21:00 LO · daily</b><br><br><b>WHAT IT IS:</b> Tempura + ramen combo counter in a machiya, opened May 2025. Convenient walkable lunch ramen for the Higashiyama day.<br><br>Address: 京都市東山区新橋通大和大路東入林下町434-2<br><br><b>↪ ~10 min walk from Ritz · 2 min from Gion-Shijo station</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.768,35.008,0</coordinates></Point>
+      <Point><coordinates>135.7758,35.0042,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Tosaka — gritty charcoal izakaya</name>
-      <description><![CDATA[<b>Dinner alt · walk-in · foreigner-welcoming</b><br><br><b>WHAT IT IS:</b> Charcoal-grill izakaya, smoke-hazed atmosphere, affordable. East-West menu (charcoal mackerel, miso bagna cauda, Wagyu chuck) — pure execution, not muddled fusion.<br><br><b>WHY FOR YOU:</b> If you want the chaos-energy izakaya vibe. Smoke, charcoal, beer, chuhai, locals. Pure cuisine, no fusion confusion — they pull it off.<br><br><b>KNOWN FOR:</b> Charcoal-grill focus; foreigner-friendly menu; affordable; walk-in.<br><br><b>↪ Central Kyoto, walkable from Kiyamachi</b>]]></description>
+      <name>Ramen Nishiki Sui</name>
+      <description><![CDATA[<b>Wed 11:00-14:30 + 18:00-21:00 LO 20:30 · closed Mondays</b><br><br><b>WHAT IT IS:</b> Cozy ramen counter in the Shirakawa alley cluster. Creative Kyoto-style or matcha ramen (opened Nov 2025 — novelty risk, ask staff what's the actual house style on the day).<br><br>Address: 京都市東山区清本町375-4 末吉町一番路地 (alley off Kiyomotocho)<br><br><b>↪ ~12 min walk from Ritz · 348m from Gion-Shijo station · 100m from Gion Tanto — pick one or the other, not both same night</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.767,35.005,0</coordinates></Point>
+      <Point><coordinates>135.774,35.004,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Honke Daiichi-Asahi Karasuma (Kyoto shoyu ramen)</name>
-      <description><![CDATA[<b>Lunch alt · OR late-night ramen finish · counter only</b><br><br><b>WHAT IT IS:</b> Karasuma branch of the 1947-founded Kyoto-style ramen shop near Kyoto Station. Rich shoyu over pork-bone broth, Fushimi soy sauce, Chudanuki pork.<br><br><b>WHY FOR YOU:</b> Lunch alt in Gion if you want serious Kyoto ramen, OR the late-night-ramen finish after Yoramu. Counter only, line moves fast at Karasuma branch (the main station shop has hours-long lines).<br><br><b>KNOWN FOR:</b> Kyoto-shoyu style (richer than Tokyo's lighter shoyu); 1947 founding; same recipe as the main station branch but without the line.<br><br><b>↪ South of Shijo on Karasuma</b>]]></description>
+      <name>Ramen Miyako Gion Honten (らぁ～めん京)</name>
+      <description><![CDATA[<b>Wed 11:00-22:00 LO 21:30 (Fri/Sat to 03:00) · walk-in · no fixed closure</b><br><br><b>WHAT IT IS:</b> Counter ramen, chicken/pork double broth. Reliable late-night Gion option — if Gion Tanto fills up or you want a late-night second meal after dinner.<br><br>Address: 京都市東山区祇園町北側303 1F<br><br><b>↪ ~14 min walk from Ritz</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.76,35.003,0</coordinates></Point>
+      <Point><coordinates>135.77773,35.00456,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Heian Shrine (alt for west-bound walk)</name>
-      <description><![CDATA[<b>Alt or extra · free entry · 06-17:30 · 30 min</b><br><br><b>WHAT IT IS:</b> Heian Jingu — 1895 shrine built for the 1100th anniversary of Kyoto becoming the capital. Massive vermilion torii visible across central Kyoto.<br><br><b>WHY FOR YOU:</b> If you have extra time and want one more shrine, this is north of Maruyama Park and NOT on Thursday's e-bike route. Walk-up entry. The garden in back has a small entry fee but is worth it.<br><br><b>KNOWN FOR:</b> Built 1895 for Heian-period commemoration; the largest torii in Kyoto; the garden has irises in May.<br><br><b>↪ 20 min walk north from Maruyama Park · or short cab</b>]]></description>
+      <name>Izakaya Yawaragi (居酒屋 和～やわらぎ～)</name>
+      <description><![CDATA[<b>Wed 11:00-14:00 LO 13:30 + 17:00-24:00 LO 23:30</b><br><br><b>WHAT IT IS:</b> Hidden obanzai (Kyoto small plates) counter near Higashiyama Station. Locals-dominant, deep sake list, chuhai available. Great as post-dinner drinks-and-snacks or alt to dinner if you want small plates instead of okonomiyaki.<br><br>Address: 京都市東山区東大路三条下ル東入南側 セゾン東山1F<br><br><b>↪ ~17 min walk from Ritz · 1 min from Higashiyama subway station</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.7831,35.0162,0</coordinates></Point>
+      <Point><coordinates>135.779,35.007,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Nijo Castle (central, walking from Ritz)</name>
-      <description><![CDATA[<b>Alt · ¥1,300 entry · 08:45-17 (last entry 16:00) · 90 min</b><br><br><b>WHAT IT IS:</b> Nijo Castle (二条城) — Tokugawa shogun's Kyoto residence, 1603. UNESCO World Heritage. The Ninomaru Palace is the famous part — 'nightingale floors' that chirp when walked on (anti-assassination feature) and meticulously preserved Tokugawa-era interior paintings.<br><br><b>WHY FOR YOU:</b> If you want a feudal-power detour instead of more temples. Walking distance from Ritz (15 min west). Different historical register — shogun's palace not religious site. Different from anything on the e-bike route.<br><br><b>KNOWN FOR:</b> Nightingale floors; Ninomaru Palace interior paintings; the 1867 abdication of the last shogun happened in this building.<br><br>Address: 541 Nijojo-cho, Nakagyo-ku<br><br><b>↪ 15 min walk west from Ritz</b>]]></description>
+      <name>Gion Tachinomi Yamaneko (山根子) — standing bar</name>
+      <description><![CDATA[<b>Daily 13:00-23:00 · walk-in · standing + high chairs</b><br><br><b>WHAT IT IS:</b> 150-year-old machiya converted to a tachinomi standing bar. 50+ Kyoto sake selections + 8 craft beers on tap. Mixed crowd (craft-beer-tourist-friendly but locals too).<br><br>Address: 京都市東山区祇園町北側321-1<br><br><b>↪ ~13 min walk from Ritz · 200m from Gion Tanto</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.748,35.0141,0</coordinates></Point>
+      <Point><coordinates>135.778,35.004,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
-      <name>Bee's Knees Kiyamachi (post-Yoramu nightcap)</name>
-      <description><![CDATA[<b>If still going at 23:00+ · Asia's 50 Best Bars ×4</b><br><br><b>WHAT IT IS:</b> Hidden cocktail bar behind a yellow door labeled 'Book Store' on Kiyamachi Street. Asia's 50 Best Bars list four years running.<br><br><b>WHY FOR YOU:</b> If you have steam left after Yoramu and want one more drink. Top-tier cocktails, hidden setting.<br><br><b>KNOWN FOR:</b> Asia's 50 Best × 4; the yellow Book Store door entrance; Kiyamachi location.<br><br><b>↪ 8 min walk from Ritz</b>]]></description>
+      <name>Gion Shinbashi Takoyagi (祇園 新橋 たこやぎ) — late takoyaki</name>
+      <description><![CDATA[<b>18:00-03:00 · closed Sundays · cash typical</b><br><br><b>WHAT IT IS:</b> Takoyaki + okonomiyaki, evening-focused, opened mid-2025. 2F walk-up. Small, locals-leaning. Late-night option if you want octopus balls + beer at 23:00. NOTE: 100m from Gion Tanto — don't double up the okonomiyaki same night.<br><br>Address: 京都市東山区橋本町401 八百平ビル2F<br><br><b>↪ Same Gion cluster as Tanto</b>]]></description>
       <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.7703,35.0068,0</coordinates></Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Bar Rocking Chair (alt nightcap)</name>
-      <description><![CDATA[<b>Post-dinner alt · Kenji Tsubokura's bar</b><br><br><b>WHAT IT IS:</b> Kenji Tsubokura's cocktail bar focused on Japanese-ingredient cocktails (yuzu, shiso, hojicha, Japanese spirits).<br><br><b>WHY FOR YOU:</b> If chuhai energy has run its course and you want a serious-Japanese-cocktail nightcap. Tsubokura is one of Japan's most-cited bartenders for indigenous-ingredient innovation.<br><br><b>KNOWN FOR:</b> Japanese-ingredient cocktail specialist; understated Kyoto setting.]]></description>
-      <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.7672,35.0058,0</coordinates></Point>
-    </Placemark>
-
-    <Placemark>
-      <name>Weekenders Coffee Tominokoji (if you need morning coffee)</name>
-      <description><![CDATA[<b>Quick morning fuel · daily 7:30-18</b><br><br><b>WHAT IT IS:</b> Kyoto specialty coffee in a converted machiya tucked behind a parking lot. Lighter Scandinavian-style roast.<br><br><b>WHY FOR YOU:</b> If your Shinkansen breakfast didn't cut it and you need a coffee before launching the temple walk. Quick stop on the way to Kiyomizu cab.<br><br><b>KNOWN FOR:</b> Kyoto's most-respected indie roaster; machiya setting; the parking-lot hidden approach.<br><br><b>↪ Central Kyoto, near Nishiki</b>]]></description>
-      <styleUrl>#bonus</styleUrl>
-      <Point><coordinates>135.7651,35.0058,0</coordinates></Point>
+      <Point><coordinates>135.7747,35.005,0</coordinates></Point>
     </Placemark>
   </Folder>
 
@@ -183,23 +155,30 @@
     <name>STATIONS — transit hubs</name>
     <Placemark>
       <name>Tokyo Station (Tokaido Shinkansen)</name>
-      <description><![CDATA[<b>Depart 07:00 · arrive by 06:40</b><br><br><b>WHAT IT IS:</b> Tokaido Shinkansen platforms are at the south end of Tokyo Station.]]></description>
+      <description><![CDATA[<b>Depart 07:00 · arrive by 06:40</b><br><br><b>WHAT IT IS:</b> Tokaido Shinkansen platforms south end of Tokyo Station.]]></description>
       <styleUrl>#station</styleUrl>
       <Point><coordinates>139.7671,35.6812,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
       <name>Kyoto Station (Hachijo exit)</name>
-      <description><![CDATA[<b>Arrive 09:12 · taxi rank south side</b><br><br><b>WHAT IT IS:</b> Hachijo (south) side for the bigger taxi rank. To Ritz: 15 min, ¥1,800-2,400.]]></description>
+      <description><![CDATA[<b>Arrive 09:12 · taxi rank south side</b><br><br><b>WHAT IT IS:</b> Hachijo (south) side for bigger taxi rank. To Ritz: 15 min, ¥1,800-2,400.]]></description>
       <styleUrl>#station</styleUrl>
       <Point><coordinates>135.7588,34.9858,0</coordinates></Point>
     </Placemark>
 
     <Placemark>
       <name>Gion-Shijo (Keihan line)</name>
-      <description><![CDATA[<b>Gion area transit</b><br><br><b>WHAT IT IS:</b> Closest station to Yasaka Shrine and the lower Higashiyama temple area.]]></description>
+      <description><![CDATA[<b>Gion area transit</b><br><br><b>WHAT IT IS:</b> Closest station to Yasaka Shrine, Kennin-ji, Gion dining cluster. Walking distance from Ritz ~10 min.]]></description>
       <styleUrl>#station</styleUrl>
-      <Point><coordinates>135.7728,35.0034,0</coordinates></Point>
+      <Point><coordinates>135.77272,35.00343,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>Higashiyama (Tozai subway)</name>
+      <description><![CDATA[<b>Closer for Okonomiyaki Kiraku Sanjo + Izakaya Yawaragi</b><br><br><b>WHAT IT IS:</b> Tozai subway. 5 min walk from Okonomiyaki Kiraku; 1 min from Yawaragi.]]></description>
+      <styleUrl>#station</styleUrl>
+      <Point><coordinates>135.7809,35.01054,0</coordinates></Point>
     </Placemark>
   </Folder>
 
