@@ -163,7 +163,7 @@
   <div class="header-top">
     <div>
       <h1>Wednesday Kyoto · May 27</h1>
-      <div class="sub">Southern Higashiyama walking tour · Gion Tanto okonomiyaki dinner</div>
+      <div class="sub">Higashiyama walk · 13:00 LUNCH Shokudo Endo · 19:00 DINNER Gion Tanto · one taxi all day</div>
     </div>
     <button class="locate-btn" id="locate">📍 Where am I</button>
   </div>
@@ -176,7 +176,7 @@
 <div class="legend" id="legend">
   <label><input type="checkbox" id="show-locked" checked> <span class="swatch locked"></span> Locked (2)</label>
   <label><input type="checkbox" id="show-major" checked> <span class="swatch major"></span> Planned (9)</label>
-  <label><input type="checkbox" id="show-bonus" checked> <span class="swatch bonus"></span> Discovery (8)</label>
+  <label><input type="checkbox" id="show-bonus" checked> <span class="swatch bonus"></span> Discovery (14)</label>
   <label><input type="checkbox" id="show-station" checked> <span class="swatch station"></span> Stations (4)</label>
 </div>
 
@@ -397,6 +397,78 @@ const PINS = [
   {
     "cat": "bonus",
     "label": "·",
+    "name": "すいば 六角富小路 (Suiba Rokkaku-Tomikoji) — tachinomi",
+    "lat": 35.00903,
+    "lon": 135.76651,
+    "when": "Wed 17:00-23:30 LO 23:30 · standing only · walk-in",
+    "what": "Standing-bar consensus pick per Japanese locals (called '立ち飲み界の王者' by Time Out Tokyo Japanese ed). Sawa (lemon sour) + Kyoto sake. ~¥1,500.",
+    "why": "Japanese-dominant crowd, female-friendly. The first-stop chuhai pick on the Kiyamachi/Teramachi evening crawl.",
+    "address": "京都府京都市中京区六角通柳馬場東入ル77 河村ビル1階",
+    "walk": "~10 min from Ritz, slight west of Teramachi at Rokkaku"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "たつみ (Tatsumi) — Kyoto Three Great Sakaba",
+    "lat": 35.00404,
+    "lon": 135.76859,
+    "when": "Wed 12:00-22:00 LO 20:50 · closed Thursday · standing or tatami",
+    "what": "Voted 'Kyoto Three Great Sakaba' by locals magazine potel.jp. Hi-Riki Lemon chuhai + highball single/double + sake.",
+    "why": "Japanese regulars, daytime + evening drinkers. ⚠ LO 20:50 — must hit by 20:00 for a proper visit. Closed Thursday.",
+    "address": "京都府京都市中京区裏寺町通四条上ル中之町572",
+    "walk": "~14 min from Ritz · 2 min from Hankyu Kawaramachi"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "鉄板 みつ喜 (Teppan Mitsuki) — Pontocho okonomiyaki ALT",
+    "lat": 35.00339,
+    "lon": 135.77068,
+    "when": "Tue-Sun 18:00-01:00 LO 24:00 · CLOSED Mondays · Wed open",
+    "what": "Pontocho okonomiyaki + teppan, water-free signature style (no water in batter — denser). Treated as a drinking-spot first, food second. Featured in Tabelog Magazine Japanese article as locals-frequented teppan.",
+    "why": "ALT to Gion Tanto if you want Pontocho/Kiyamachi instead of Gion. Open till 01:00 = much wider dinner window. ¥3,000-3,999.",
+    "address": "京都府京都市中京区木屋町四条上ル下樵木町192",
+    "walk": "~15 min from Ritz, Pontocho alley near Shijo"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "立ち飲み もみじ (Tachinomi Momiji) — seafood tachinomi",
+    "lat": 35.0035,
+    "lon": 135.77001,
+    "when": "Daily 12:00-22:00 LO 21:30 · cash only · standing",
+    "what": "Fresh seafood/sashimi standing bar at Kiyamachi-Shijo gateway. Sake/shochu/highball. ¥1,000-2,999.",
+    "why": "Japanese mid-tier salaryman daytime drinkers. Alt to Suiba if you want fresh fish standing.",
+    "address": "京都府京都市中京区鍋屋町225 萩原ビル 1F",
+    "walk": "~13 min from Ritz at Kiyamachi-Shijo entrance"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "ietiem (イエティアム) — Takase-gawa canal-view wine bar",
+    "lat": 34.99846,
+    "lon": 135.77013,
+    "when": "14:00-22:00 · IRREGULAR — CALL 075-365-1318 FIRST",
+    "what": "Standing wine bar with explicit canal-window view of Takase-gawa. Glass wine ¥800+, bruschetta/charcuterie. Young Japanese couples + groups per kyotopi.jp.",
+    "why": "⭐ The actual canal-view pick. Only verified canal-window bar in Kiyamachi area. Call first — irregular hours.",
+    "address": "京都市下京区市之町260-7, along Takasegawa canal west of Ayagikoji-bashi south of Shijo",
+    "walk": "~17 min from Ritz, southern Kiyamachi"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
+    "name": "木屋町ゴールデン酒場 (Kiyamachi Golden Sakaba) — late-night",
+    "lat": 35.00854,
+    "lon": 135.76925,
+    "when": "Wed 18:00-03:00 · 1F standing, 2F seated · walk-in",
+    "what": "Showa-retro standing bar on Kiyamachi. Highball + chuhai + oden + kushiage ¥300-900.",
+    "why": "Late-night option after dinner. Japanese-majority drinkers, Showa atmosphere.",
+    "address": "京都府京都市中京区木屋町通六角東側材木町184 都会館ビル 1F",
+    "walk": "~12 min from Ritz, south on Kiyamachi"
+  },
+  {
+    "cat": "bonus",
+    "label": "·",
     "name": "Gion Tachinomi Yamaneko (山根子) — standing bar",
     "lat": 35.004,
     "lon": 135.778,
@@ -453,7 +525,7 @@ const PINS = [
     "what": "Tozai subway. 5 min walk from Okonomiyaki Kiraku; 1 min from Yawaragi."
   }
 ];
-const COUNTS = {"locked":2,"major":9,"bonus":8,"station":4};
+const COUNTS = {"locked":2,"major":9,"bonus":14,"station":4};
 
 // Business-name links (NOT coordinates) — opens the actual business listing
 function appleMapsLink(p) {
@@ -466,7 +538,7 @@ function googleMapsLink(p) {
 }
 
 // ===== MAP VIEW =====
-const map = L.map('map').setView([35.06140782608695, 136.12254826086956], 13);
+const map = L.map('map').setView([35.049632413793105, 136.04944068965517], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap', maxZoom: 19
 }).addTo(map);
